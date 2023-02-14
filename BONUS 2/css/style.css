@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  padding: 10px;
+}
+
+.scb-team-description {
+  line-height: 3em;
+}
