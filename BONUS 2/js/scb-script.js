@@ -2,7 +2,7 @@ console.log("Ciao Cianuro... Oggi l'esercizio è OUR TEAM");
 //********************
 // RECUPERO ELEMENTI DAL DOM
 //******************** */
-let membersTableElement = document.getElementById("membri-del-team");
+let membersCardElement = document.getElementById("membri-del-team");
 
 //********************
 // CREO L'OGGETTO MEMBRO TEAM
@@ -65,15 +65,15 @@ for (let i = 0; i < membriTeam.length; i++) {
   // PREPARO STRUTTURA DATI DA STAMPARE SUL DOM
   //******************** */
   const membro = `
-  <tr>
-  <td>${fullName}</td>
-  <td>${rule}</td>
-  <td>
-     <img src="${foto}" alt="foto membro team" class"member-img">
-  </td>
-  </tr>
+<div class="col-12 col-md-5 col-lg-4 my-4">
+  <div class="scb-card text-center">
+    <img src="${foto}" alt="foto membro del team">
+    <h3>${fullName}</h3>
+    <p class="scb-p">${rule}</p>
+  </div>
+</div>
   `;
   // STAMPO SUL DOM
-  membersTableElement.innerHTML += membro;
+  membersCardElement.innerHTML += membro;
   // CHIUSURA CICLO FOR
 }
