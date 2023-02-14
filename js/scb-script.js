@@ -41,3 +41,11 @@ let membriTeam = [
   },
 ];
 console.log(membriTeam);
+
+//********************
+// STAMPO IN CONSOLE LE INFORMAZIONI DI OGNI MEMBRO DEL TEAM
+//******************** */
+for (let key in membriTeam) {
+  console.log(membriTeam[key]);
+  // CHIUSURA CICLO FOR
+}
