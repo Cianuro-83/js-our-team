@@ -2,3 +2,12 @@ body {
   background-color: black;
   color: white;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.th {
+  padding-left: 50px;
+}

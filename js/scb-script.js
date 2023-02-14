@@ -1,4 +1,8 @@
 console.log("Ciao Cianuro... Oggi l'esercizio è OUR TEAM");
+//********************
+// RECUPERO ELEMENTI DAL DOM
+//******************** */
+let membersTableElement = document.getElementById("membri-del-team");
 
 //********************
 // CREO L'OGGETTO MEMBRO TEAM
@@ -47,5 +51,27 @@ console.log(membriTeam);
 //******************** */
 for (let key in membriTeam) {
   console.log(membriTeam[key]);
+  // CHIUSURA CICLO FOR
+}
+//********************
+// CICLO I MEMBRI DEL TEAM
+//******************** */
+for (let i = 0; i < membriTeam.length; i++) {
+  let membri = membriTeam[i];
+  let fullName = membri.nome;
+  let rule = membri.ruolo;
+  let foto = membri.foto;
+  //********************
+  // PREPARO STRUTTURA DATI DA STAMPARE SUL DOM
+  //******************** */
+  const membro = `
+  <tr>
+    <td>${fullName}</td>
+    <td>${rule}</td>
+    <td>${foto}</td>
+  </tr>
+  `;
+  // STAMPO SUL DOM
+  membersTableElement.innerHTML += membro;
   // CHIUSURA CICLO FOR
 }
